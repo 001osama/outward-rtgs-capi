@@ -1,11 +1,16 @@
 package webClient;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
+import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
+
 import dto.LoginRequestDto;
 import dto.UserDto;
 
+@RegisterRestClient
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface WebClient {
@@ -24,19 +29,19 @@ public interface WebClient {
     
     @GET
     @Path("/getallcurrencies")
-    public Response getAllCurrencies();
+    Response getAllCurrencies();
 
     @GET
     @Path("/getallsbptrantypes")
-    public Response getSBPTranType();
+    Response getSBPTranType();
 
     @GET
     @Path("/getallaccountnos")
-    public Response getAllAccounts(@QueryParam("customerNo") String customerNo);
+    Response getAllAccounts(@QueryParam("customerNo") String customerNo);
 
     @GET
     @Path("/getaccountdetails")
-    public Response getAccountDetails(@QueryParam("accountNo") String accountNo);
+    Response getAccountDetails(@QueryParam("accountNo") String accountNo);
 
 }
 
