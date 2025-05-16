@@ -8,8 +8,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class AccountDetailDto {
-    private String accounType;
-    private String iban;
-    private String accountName;
-    private String availableBalance;
+    String accountType;
+    String iban;
+    String accountName;
+    String availableBalance;
 }
