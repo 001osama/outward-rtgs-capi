@@ -2,13 +2,17 @@ package dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
+@Setter
 public class AccountNumberDto {
-    private String branchCode;
-    private String accountType;
-    private String customerNo;
-    private String runNo;
-    private String checkDigit;
+    String branchCode;
+    String accountType;
+    String customerNo;
+    String runNo;
+    String checkDigit;
 }
