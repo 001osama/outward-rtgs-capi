@@ -81,7 +81,7 @@ public class MainResource {
     @Path("/getpurposeofpaymentlist")
     public Response getPurposeofPaymentList()
     {
-        return mainService.getSBPTranTypeList();
+        return mainService.getPurposeofPaymentList();
     }
 
     @GET
