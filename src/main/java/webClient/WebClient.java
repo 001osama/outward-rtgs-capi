@@ -54,7 +54,7 @@ public interface WebClient {
 
     @GET
     @Path("/getbeneficiarybanklist")
-    Response getBeneficiaryBankList(@QueryParam("search") String search);
+    Response getBeneficiaryBankList(@QueryParam("searchTerm") String searchTerm);
 
     @GET
     @Path("/getbeneficiaryaccountdetails")

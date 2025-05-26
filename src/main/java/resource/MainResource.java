@@ -86,9 +86,9 @@ public class MainResource {
 
     @GET
     @Path("/getbeneficiarybanklist")
-    public Response getBeneficiaryBankList(@QueryParam("search") String search)
+    public Response getBeneficiaryBankList(@QueryParam("searchTerm") String searchTerm)
     {
-        return mainService.getBeneficiaryBankList(search);
+        return mainService.getBeneficiaryBankList(searchTerm);
     }
 
     @GET

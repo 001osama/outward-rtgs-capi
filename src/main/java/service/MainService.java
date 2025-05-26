@@ -58,8 +58,8 @@ public class MainService {
         return webClient.getPurposeofPaymentList();
     }
 
-    public Response getBeneficiaryBankList(String search) {
-        return webClient.getBeneficiaryBankList(search);
+    public Response getBeneficiaryBankList(String searchTerm) {
+        return webClient.getBeneficiaryBankList(searchTerm);
     }
 
     public Response getBeneficairyAccountDetails(String accOrIban, String bankCode) {
