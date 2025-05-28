@@ -20,6 +20,11 @@ import dto.VoucherInfoDto;
 @Produces(MediaType.APPLICATION_JSON)
 public interface WebClient {
 
+
+    @POST
+    @Path("/login")
+    Response login(LoginRequestDto loginRequest);
+
     @POST
     @Path("/createuser")
     Response createUser(UserDto user);
@@ -54,7 +59,7 @@ public interface WebClient {
 
     @GET
     @Path("/getbeneficiarybanklist")
-    Response getBeneficiaryBankList(@QueryParam("searchTerm") String searchTerm);
+    Response getBeneficiaryBankList(@QueryParam("search") String search);
 
     @GET
     @Path("/getbeneficiaryaccountdetails")

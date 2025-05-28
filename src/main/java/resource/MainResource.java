@@ -29,6 +29,14 @@ public class MainResource {
     MainService mainService;
 
     @POST
+    @Path("/login")
+    public Response login(LoginRequestDto user) 
+    {
+        return mainService.login(user);
+    }
+
+
+    @POST
     @Path("/createuser")
     public Response createUser(UserDto user) 
     {

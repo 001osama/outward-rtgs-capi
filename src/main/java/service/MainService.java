@@ -26,6 +26,11 @@ public class MainService {
     @RestClient
     WebClient webClient;
 
+    public Response login(LoginRequestDto loginRequestDto) {
+        return webClient.login(loginRequestDto); 
+    }
+
+    
     public Response getUserInfo(LoginRequestDto loginRequestDto) {
         return webClient.getUserInfo(loginRequestDto); 
     }
