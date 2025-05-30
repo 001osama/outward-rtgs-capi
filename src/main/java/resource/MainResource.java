@@ -65,9 +65,9 @@ public class MainResource {
 
     @GET
     @Path("/getcustomeraccountnos")
-    public Response getCustomerAccountNos(@QueryParam("customerNo") String customerNo) 
+    public Response getCustomerAccountNos(@QueryParam("customerNo") String customerNo, @QueryParam("branchCode") String branchCode) 
     {
-        return mainService.getCustomerAccountNos(customerNo);
+        return mainService.getCustomerAccountNos(customerNo, branchCode);
     }
 
     @GET
@@ -116,9 +116,9 @@ public class MainResource {
 
     @GET
     @Path("/getunauthorizedoutwardrtgslist")
-    public Response getUnauthorizedOutwardRTGSList()
+    public Response getUnauthorizedOutwardRTGSList(@QueryParam("branchCode") String branchCode)
     {
-        return mainService.getUnauthorizedOutwardRTGSList();
+        return mainService.getUnauthorizedOutwardRTGSList(branchCode);
     }
 
 
@@ -126,9 +126,10 @@ public class MainResource {
     @Path("/iscancelvoucherexist")
     public Response isCancelVoucherExist(
         @QueryParam("voucherNo") String voucherNo,
-        @QueryParam("voucherYear") String voucherYear)
+        @QueryParam("voucherYear") String voucherYear,
+        @QueryParam("branchCode") String branchCode)
     {
-        return mainService.isCancelVoucherExist(voucherNo, voucherYear);
+        return mainService.isCancelVoucherExist(voucherNo, voucherYear, branchCode);
     }
 
 
@@ -152,9 +153,10 @@ public class MainResource {
     @Path("/getOutwardRTGS")
     public Response getOutwardRTGS(
         @QueryParam("voucherNo") String voucherNo,
-        @QueryParam("voucherYear") String voucherYear)
+        @QueryParam("voucherYear") String voucherYear,
+        @QueryParam("branchCode") String branchCode)
     {
-        return mainService.getOutwardRTGS(voucherNo, voucherYear);
+        return mainService.getOutwardRTGS(voucherNo, voucherYear, branchCode);
     }
 
     @POST

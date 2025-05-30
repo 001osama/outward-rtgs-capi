@@ -42,7 +42,7 @@ public interface WebClient {
 
     @GET
     @Path("/getcustomeraccountnos")
-    Response getCustomerAccountNos(@QueryParam("customerNo") String customerNo);
+    Response getCustomerAccountNos(@QueryParam("customerNo") String customerNo, @QueryParam("branchCode") String branchCode);
 
     @GET
     @Path("/getaccountdetails")
@@ -74,13 +74,14 @@ public interface WebClient {
 
     @GET
     @Path("/getunauthorizedoutwardrtgslist")
-    Response getUnauthorizedOutwardRTGSList();
+    Response getUnauthorizedOutwardRTGSList(@QueryParam("branchCode") String branchCode);
 
     @GET
     @Path("/iscancelvoucherexist")
     Response isCancelVoucherExist(
         @QueryParam("voucherNo") String voucherNo,
-        @QueryParam("voucherYear") String voucherYear);
+        @QueryParam("voucherYear") String voucherYear,
+        @QueryParam("branchCode") String branchCode);
 
 
 
@@ -97,7 +98,8 @@ public interface WebClient {
     @Path("/getOutwardRTGS")
     Response getOutwardRTGS(
         @QueryParam("voucherNo") String voucherNo, 
-        @QueryParam("voucherYear") String voucherYear); 
+        @QueryParam("voucherYear") String voucherYear,
+        @QueryParam("branchCode") String branchCode); 
 
 
     @POST 

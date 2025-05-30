@@ -46,8 +46,8 @@ public class MainService {
         return webClient.getSBPTranTypeList();
     }
 
-    public Response getCustomerAccountNos(String customerNo) {
-        return webClient.getCustomerAccountNos(customerNo);
+    public Response getCustomerAccountNos(String customerNo, String branchCode) {
+        return webClient.getCustomerAccountNos(customerNo, branchCode);
     }
 
     public Response getAccountDetails(String accountNo) {
@@ -74,12 +74,12 @@ public class MainService {
         return webClient.getReasonList();
     }
 
-    public Response getUnauthorizedOutwardRTGSList() {
-        return webClient.getUnauthorizedOutwardRTGSList();
+    public Response getUnauthorizedOutwardRTGSList(String branchCode) {
+        return webClient.getUnauthorizedOutwardRTGSList(branchCode);
     }
 
-    public Response isCancelVoucherExist(String voucherNo, String voucherYear ) {
-        return webClient.isCancelVoucherExist(voucherNo, voucherYear);
+    public Response isCancelVoucherExist(String voucherNo, String voucherYear, String branchCode ) {
+        return webClient.isCancelVoucherExist(voucherNo, voucherYear, branchCode);
     }
 
 
@@ -91,8 +91,8 @@ public class MainService {
         return webClient.createOutwardRtgs(rtgsForm);
     }
 
-    public Response getOutwardRTGS(String voucherNo, String voucherYear ) {
-        return webClient.getOutwardRTGS(voucherNo, voucherYear);
+    public Response getOutwardRTGS(String voucherNo, String voucherYear, String branchCode ) {
+        return webClient.getOutwardRTGS(voucherNo, voucherYear, branchCode);
     }
 
     public Response cancelOutwardRtgs(VoucherCancelDto voucherDto) {
